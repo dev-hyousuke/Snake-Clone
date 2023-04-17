@@ -4,7 +4,7 @@ using UnityEngine;
 [RequireComponent(typeof(BoxCollider2D))]
 public class Snake : MonoBehaviour
 {
-    private List<Transform> snakeSegments = new List<Transform>();
+    private readonly List<Transform> snakeSegments = new();
     public Transform snakeSegmentPrefab;
     public Vector2 direction = Vector2.right;
     private Vector2 input;
@@ -99,21 +99,4 @@ public class Snake : MonoBehaviour
         for (int i = 0; i < initialSize - 1; i++)
             GrowSnake();
     }
-
-//    f(Input.GetKeyDown(KeyCode.W) && direction != Vector2.down)
-//    {
-//        direction = Vector2.up;
-//    }
-//        else if(Input.GetKeyDown(KeyCode.S) && direction != Vector2.up)
-//        {
-//            direction = Vector2.down;
-//        }
-//        else if (Input.GetKeyDown(KeyCode.A) && direction != Vector2.right)
-//{
-//    direction = Vector2.left;
-//}
-//else if (Input.GetKeyDown(KeyCode.D) && direction != Vector2.left)
-//{
-//    direction = Vector2.right;
-//}
 }
